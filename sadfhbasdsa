@@ -1,0 +1,351 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AydinRe/wdsafsad/main/ambition"))()
+
+local gui = Library:create{
+    Theme = Library.Themes.Serika
+}
+
+--Tab1 //Main
+local tab = gui:tab{
+    Icon = "rbxassetid://6034996695",
+    Name = "Main"
+}
+
+tab:button({
+    Name = "README.txt",
+    Callback = function()
+        tab:prompt{
+            Title = "Hello!",
+            Text = "I won't be able to fast update for 2 days",
+            Buttons = {
+                Ok = function()
+                    tab:prompt{
+                        Followup = true,
+                        Title = "Hello! 2",
+                        Text = "I will not be available for 2 days",
+                        Buttons = {
+                            Ok = function()
+                                tab:prompt{
+                                    Followup = true,
+                                    Title = "Hello! 3",
+                                    Text = "I will add more soon",
+                                    Buttons = {
+                                Ok = function()
+                                end
+                            }
+                                }
+                            end,
+                        }
+                    }
+                end,
+            }
+        }
+    end,
+})
+
+tab:button({
+    Name = "PET SIM X | Huge Cat Generator",
+    Callback = function()
+        tab:prompt{
+            Followup = true,
+            Title = "Huge Cat Generator?",
+            Text = "Start ?",
+            Buttons = {
+                Yes = function()
+                    
+ ------------------------------------------------------------------------------------------------------------------------------------Huge Cat Gen
+                local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib'),true))()
+Lib.prompt('Huge Cat Generator', 'Loading...', 3)
+wait(3)
+
+local rconsoleprint = rconsoleprint;
+local rconsolename = rconsolename;
+
+local math_random = math.random;
+local coroutine_wrap = coroutine.wrap;
+local task_wait = task.wait;
+local warn = warn;
+
+local code_count = math.huge;
+local characters_list = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+local character_list_length = #characters_list;
+
+local redeem_remote = workspace.__THINGS.__REMOTES:WaitForChild("redeem merch code");
+
+
+if not isfile("working_codes.txt") then
+   writefile("working_codes.txt", "");
+end;
+
+
+function generate_random_code()
+  local code_string = "";
+ 
+  for index = 1, 10 do
+      code_string = code_string .. characters_list[math_random(1, character_list_length)];
+  end;
+ 
+  return "pet-" .. code_string;
+end;
+
+local checked_amount = 0;
+local working_amount = 0;
+
+local function output_debug_data()
+   rconsolename("Huge Cat Generator | owner : xNigof | Checked: " .. checked_amount .. "/" .. code_count .. " | Working: " .. working_amount);
+end;
+
+output_debug_data();
+
+
+for index = 1, code_count do
+   local random_code = generate_random_code();
+   local code_redeem = redeem_remote:InvokeServer({random_code});
+   local response_status = code_redeem[1];
+   local response_message = code_redeem[2];
+   
+   warn(response_message);
+   
+   checked_amount = checked_amount + 1;
+ 
+   if not response_status then
+       rconsoleprint("@@RED@@");
+       rconsoleprint("[NOT WORKING] ");
+       rconsoleprint("@@WHITE@@");
+       rconsoleprint(random_code .. "\n");
+     
+       output_debug_data();
+   else
+       working_amount = working_amount + 1;
+     
+       rconsoleprint("@@LIGHT_GREEN@@");
+       rconsoleprint("[WORKING] ");
+       rconsoleprint("@@WHITE@@");
+       rconsoleprint(random_code .. "\n");
+     
+       appendfile("working codes.txt", random_code .. "\n");
+     
+       output_debug_data();
+   end;
+   
+   wait();
+end;
+
+local StarterGui = game:GetService("StarterGui")
+while wait() do
+StarterGui:SetCore("DevConsoleVisible", false)
+end
+
+Lib.prompt('Huge Cat Generator', 'Loaded ! :(', 3)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                end,
+                No = function()
+                print("no started gen")
+                end
+            }
+        }
+    end,
+})
+
+tab:button({
+    Name = "copy discord server",
+    Callback = function()
+        tab:prompt{
+            Title = "clipboard",
+            Text = "copied to clipboard",
+            Buttons = {
+                Ok = function()
+                    setclipboard('https://discord.gg/Q4ztKZ2yqJ')
+                end
+            }
+        }
+    end
+})
+
+--Tab2 // Movement
+local tab = gui:tab{
+    Icon = "rbxassetid://6022668945",
+    Name = "Movement"
+}
+
+local cum = tab:slider({
+    Name = "WalkSpeed",
+    Style = Library.ColorPickerStyles.Legacy,
+    Description = "Changes WalkSpeed",
+    Max = 350,
+    Min = 10,
+	Default = 16,
+    Callback = function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end,
+})
+
+local cum = tab:slider({
+    Name = "JumpPower",
+    Style = Library.ColorPickerStyles.Legacy,
+    Description = "Changes JumpPower",
+    Max = 200,
+    Min = 15,
+	Default = 50,
+    Callback = function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end,
+})
+
+local cum = tab:slider({
+    Name = "HipHeight",
+    Style = Library.ColorPickerStyles.Legacy,
+    Description = "Changes HipHeight",
+    Max = 75,
+    Min = 2,
+	Default = 2,
+    Callback = function(s)
+        game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
+    end,
+})
+
+tab:button({
+    Name = "MovementDisabler",
+    Description = "If anti cheat is added to the game, this toggle will block anti cheat",
+    Callback = function()
+        gui:set_Status("LQqlyM55XwvV413BAAif")
+        wait(0.02)
+        gui:set_Status("xqQfCtNf27quGCdi6XJo")
+        wait(0.02)
+        gui:set_Status("a0AKa6WKecZRCdBaZ8zs")
+        wait(0.02)
+        gui:set_Status("oc7FdMO3kRS7WHeGwA6b")
+        wait(0.02)
+        gui:set_Status("bIy251M3JZvtlL2OA6ZT")
+        wait(0.02)
+        gui:set_Status("FLB8ZFrLGJosM7HRpB48")
+        wait(0.02)
+        gui:set_Status("6mjjDazg9mTFj5l6DA0q")
+        wait(0.02)
+        gui:set_Status("ODnrUAc2uxdhE7pRPdol")
+        wait(0.02)
+        gui:set_Status("daB1t6of1kFAKorRAlSb")
+        wait(0.02)
+        gui:set_Status("UO4n3OGeLe9CQ5naXQkB")
+        wait(0.02)
+        gui:set_Status("WTH40mKao3g6kygGdYhi")
+        wait(0.02)
+        gui:set_Status("TECPbHjlIFCYWiJXJp3k")
+        wait(0.02)
+        gui:set_Status("XdahwWSdb_osct*40YMB1KK")
+        wait(0.02)
+        gui:set_Status("LQqlyM55XwvV413BAAif")
+        wait(0.02)
+        gui:set_Status("xqQfCtNf27quGCdi6XJo")
+        wait(0.02)
+        gui:set_Status("a0AKa6WKecZRCdBaZ8zs")
+        wait(0.02)
+        gui:set_Status("c_oc7FdMO3kRS7WHeGwA6b")
+        wait(0.02)
+        gui:set_Status("bIy251M3JZvtlL2OA6ZT")
+        wait(0.02)
+        gui:set_Status("FLB8ZFrLGJosM7HRpB48")
+        wait(0.02)
+        gui:set_Status("6mjjDazg9mTFj5l6DA0q")
+        wait(0.02)
+        gui:set_Status("ODnrUAc2uxdhE7pRPdol")
+        wait(0.02)
+        gui:set_Status("daB1t6of1kFAKorRAlSb")
+        wait(0.02)
+        gui:set_Status("UO4n3OGeLe9CQ5naXQkB")
+        wait(0.02)
+        gui:set_Status("WTH40mKao3g6kygGdYhi")
+        wait(0.02)
+        gui:set_Status("TECPbHjlIFCYWiJXJp3k")
+        wait(0.02)
+        gui:set_Status("b_XdahwWSdosct40YMB1KK")
+        wait(0.02)
+        gui:set_Status("LQqlyM55XwvV413BAAif")
+        wait(0.02)
+        gui:set_Status("xqQfCtNf27quGCdi6XJo")
+        wait(0.02)
+        gui:set_Status("a0AKa6WKecZRCdBaZ8zs")
+        wait(0.02)
+        gui:set_Status("oc7FdMO3kRS7WHeGwA6b")
+        wait(0.02)
+        gui:set_Status("bIy251M3JZvtlL2OA6ZT")
+        wait(0.02)
+        gui:set_Status("FLB8ZFrLGJosM7HRpB48")
+        wait(0.02)
+        gui:set_Status("6mjjDazg9mTFj5l6DA0q")
+        wait(0.02)
+        gui:set_Status("ODnrUAc2uxdhE7pRPdol")
+        wait(0.02)
+        gui:set_Status("daB1t6of1kFAKorRAlSb")
+        wait(0.02)
+        gui:set_Status("UO4n3OGeLe9CQ5naXQkB")
+        wait(0.02)
+        gui:set_Status("WTH40mKao3g6kygGdYhi")
+        wait(0.02)
+        gui:set_Status("TECPbHjlIFCYWiJXJp3k")
+        wait(0.02)
+        gui:set_Status("XdahwWSdb_osct*40YMB1KK")
+        wait(0.02)
+        gui:set_Status("LQqlyM55XwvV413BAAif")
+        wait(0.02)
+        gui:set_Status("xqQfCtNf27quGCdi6XJo")
+        wait(0.02)
+        gui:set_Status("a0AKa6WKecZRCdBaZ8zs")
+        wait(0.02)
+        gui:set_Status("c_oc7FdMO3kRS7WHeGwA6b")
+        wait(0.02)
+        gui:set_Status("bIy251M3JZvtlL2OA6ZT")
+        wait(0.02)
+        gui:set_Status("FLB8ZFrLGJosM7HRpB48")
+        wait(0.02)
+        gui:set_Status("6mjjDazg9mTFj5l6DA0q")
+        wait(0.02)
+        gui:set_Status("ODnrUAc2uxdhE7pRPdol")
+        wait(0.02)
+        gui:set_Status("daB1t6of1kFAKorRAlSb")
+        wait(0.02)
+        gui:set_Status("UO4n3OGeLe9CQ5naXQkB")
+        wait(0.02)
+        gui:set_Status("WTH40mKao3g6kygGdYhi")
+        wait(0.02)
+        gui:set_Status("TECPbHjlIFCYWiJXJp3k")
+        wait(0.02)
+        gui:set_Status("b_XdahwWSdosct40YMB1KK")
+        wait(0.05)
+        gui:set_Status("Disabling Movement Checks...")
+        wait(0.3)
+        gui:set_Status("Disabling Movement Checks..")
+        wait(0.3)
+        gui:set_Status("Disabling Movement Checks.")
+        wait(0.3)
+        gui:set_Status("Disabling Movement Checks...")
+        wait(0.3)
+        gui:set_Status("Disabling Movement Checks..")
+        wait(0.3)
+        gui:set_Status("Disabling Movement Checks.")
+        wait(0.3)
+        tab:prompt{
+            Title = "MovementDisabler",
+            Text = "Disabled Movement//MovementChecks!!!",
+            Buttons = {
+                Ok = function()
+                    tab:prompt{
+            Title = "MovementDisabler",
+            Text = "Disabled Movement//MovementChecks!!!",
+            Buttons = {
+                Ok = function()
+                    gui:set_Status("very cool")
+                end
+            }
+        }
+    end,
+    }
+   }
+  end
+})
+
+tab:toggle({
+    Name = "test",
+    Description = "this toggle does nothing...",
+    Callback = function()
+    end,
+})
